@@ -18,33 +18,13 @@ neuron::neuron(int x, int y, int z) : here(x,y,z), dendrites(numberofDendritesPe
     lastState       = 0;
     t               = rand() *100.0/RAND_MAX;
     ///set effect
-    if(t < 35)
+    if(t > 50)
     {
-        effect      = 1;         //activator
-    }
-    else if(t < 45)
-    {
-        effect      = -0.2;         //inhibitor
-    }
-    else if(t < 60)
-    {
-        effect      = 1;
-    }
-    else if(t < 75)
-    {
-        effect      = -0.2;
-    }
-    else if(t < 85)
-    {
-        effect      = 1;
-    }
-    else if(t < 95)
-    {
-        effect      = -0.2;
+        effect = 1;
     }
     else
     {
-        effect      = 1;
+        effect = -0.5;
     }
 }
 
@@ -122,21 +102,22 @@ int neuron::getDendrites()
 void neuron::stimulate()
 {
     currentState = 1;
-    effect = 3;
+    effect = 1;
+
 }
 
 void neuron::process()
 {
     if((currentState == 0)&&(refractory == false)){
         float sum = 0;
-        int d = 0;
+        int ad = 0;
+        int id = 0;
         
         for(int i = 0; i < 26 ; i++){
             
             dendrite* dptr = dendrites[i];
             
             neuron* nptr = dptr->getPost();
-            
             
             
             if(dptr != NULL && nptr != NULL){
@@ -146,12 +127,12 @@ void neuron::process()
                 dptr->decrementCausalityCouter();
                 
                 if(((nptr->getLastState()) * (nptr->getEffect()) * (dptr->getWeight())) > 0){
-                    activatorDendrites[d] = dptr;
-                    d++;
+                    activatorDendrites[ad] = dptr;
+                    ad++;
                 }
                 if(((nptr->getLastState()) * (nptr->getEffect()) * (dptr->getWeight())) < 0){
-                    inhibitorDendrites[d] = dptr;
-                    d++;
+                    inhibitorDendrites[id] = dptr;
+                    id++;
                 }
             }
         }

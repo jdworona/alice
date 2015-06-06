@@ -29,7 +29,7 @@ private:
     int currentState;              //1 or 0
     int lastState;
     bool refractory;
-    float effect;       //1 activate, 0 inhibit
+    float effect;       //1 activate, -1 inhibit
 public:
     void lastEqualsCurrentState();
     int getLastState();

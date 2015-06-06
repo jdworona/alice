@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         cin >> c;
         
         troy.stimulate(xs, ys, zs);
-        //troy.write(cout);
+        troy.write(cout);
         troy.think(c, xr, yr, zr);
     }
     return EXIT_SUCCESS;

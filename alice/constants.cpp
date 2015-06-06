@@ -9,5 +9,5 @@
 #include "constants.h"
 
 const int   numberofDendritesPerNeuron  = 26;
-const float defaultWeight               = 0.4;
+const float defaultWeight               = 0.51;
 const float inputWeight                 = 0.6;
