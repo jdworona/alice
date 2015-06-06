@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		81514B9E1ACB57EE00797306 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81514B9D1ACB57EE00797306 /* main.cpp */; };
+		81CECFDD1B1F5EEC00BA6F22 /* dendrite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CECFDB1B1F5EEC00BA6F22 /* dendrite.cpp */; };
+		81CECFE01B1F5FAB00BA6F22 /* neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CECFDE1B1F5FAB00BA6F22 /* neuron.cpp */; };
+		81CECFE31B1F611400BA6F22 /* location.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CECFE11B1F611400BA6F22 /* location.cpp */; };
+		81CECFE71B1F629800BA6F22 /* brain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CECFE51B1F629800BA6F22 /* brain.cpp */; };
+		81CECFEA1B1FEB5400BA6F22 /* constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81CECFE81B1FEB5400BA6F22 /* constants.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		81514B9A1ACB57EE00797306 /* alice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = alice; sourceTree = BUILT_PRODUCTS_DIR; };
 		81514B9D1ACB57EE00797306 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		81CECFDB1B1F5EEC00BA6F22 /* dendrite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dendrite.cpp; sourceTree = "<group>"; };
+		81CECFDC1B1F5EEC00BA6F22 /* dendrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dendrite.h; sourceTree = "<group>"; };
+		81CECFDE1B1F5FAB00BA6F22 /* neuron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neuron.cpp; sourceTree = "<group>"; };
+		81CECFDF1B1F5FAB00BA6F22 /* neuron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neuron.h; sourceTree = "<group>"; };
+		81CECFE11B1F611400BA6F22 /* location.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = location.cpp; sourceTree = "<group>"; };
+		81CECFE21B1F611400BA6F22 /* location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = location.h; sourceTree = "<group>"; };
+		81CECFE41B1F61FE00BA6F22 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		81CECFE51B1F629800BA6F22 /* brain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = brain.cpp; sourceTree = "<group>"; };
+		81CECFE61B1F629800BA6F22 /* brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brain.h; sourceTree = "<group>"; };
+		81CECFE81B1FEB5400BA6F22 /* constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = constants.cpp; sourceTree = "<group>"; };
+		81CECFE91B1FEB5400BA6F22 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				81514B9D1ACB57EE00797306 /* main.cpp */,
+				81CECFE41B1F61FE00BA6F22 /* main.h */,
+				81CECFE11B1F611400BA6F22 /* location.cpp */,
+				81CECFE21B1F611400BA6F22 /* location.h */,
+				81CECFE81B1FEB5400BA6F22 /* constants.cpp */,
+				81CECFE91B1FEB5400BA6F22 /* constants.h */,
+				81CECFE51B1F629800BA6F22 /* brain.cpp */,
+				81CECFE61B1F629800BA6F22 /* brain.h */,
+				81CECFDE1B1F5FAB00BA6F22 /* neuron.cpp */,
+				81CECFDF1B1F5FAB00BA6F22 /* neuron.h */,
+				81CECFDB1B1F5EEC00BA6F22 /* dendrite.cpp */,
+				81CECFDC1B1F5EEC00BA6F22 /* dendrite.h */,
 			);
 			path = alice;
 			sourceTree = "<group>";
@@ -118,7 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CECFDD1B1F5EEC00BA6F22 /* dendrite.cpp in Sources */,
+				81CECFE71B1F629800BA6F22 /* brain.cpp in Sources */,
 				81514B9E1ACB57EE00797306 /* main.cpp in Sources */,
+				81CECFE31B1F611400BA6F22 /* location.cpp in Sources */,
+				81CECFE01B1F5FAB00BA6F22 /* neuron.cpp in Sources */,
+				81CECFEA1B1FEB5400BA6F22 /* constants.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +234,9 @@
 		81514BA21ACB57EE00797306 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				LD_GENERATE_MAP_FILE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +244,9 @@
 		81514BA31ACB57EE00797306 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				LD_GENERATE_MAP_FILE = NO;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +270,7 @@
 				81514BA31ACB57EE00797306 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
